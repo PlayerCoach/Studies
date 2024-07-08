@@ -1,0 +1,6 @@
+.ms-Label.is-required:after {
+  content: ' *';
+  color: #a80000;
+}
+????
+.ms-Label.is-required:after,E,content

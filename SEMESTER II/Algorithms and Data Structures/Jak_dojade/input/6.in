@@ -1,0 +1,113 @@
+100 10
+*AAA.*AAB.*AAC.*AAD.*AAE.*AAF.*AAG.*AAH.*AAI.*AAJ.*AAK.*AAL.*AAM.*AAN.*AAO.*AAP.*AAQ.*AAR.*AAS.*AAT.
+....................................................................................................
+*AAU.*AAV.*AAW.*AAX.*AAY.*AAZ.*AA0.*AA1.*AA2.*AA3.*AA4.*AA5.*AA6.*AA7.*AA8.*AA9.*ABA.*ABB.*ABC.*ABD.
+....................................................................................................
+*ABE.*ABF.*ABG.*ABH.*ABI.*ABJ.*ABK.*ABL.*ABM.*ABN.*ABO.*ABP.*ABQ.*ABR.*ABS.*ABT.*ABU.*ABV.*ABW.*ABX.
+....................................................................................................
+*ABY.*ABZ.*AB0.*AB1.*AB2.*AB3.*AB4.*AB5.*AB6.*AB7.*AB8.*AB9.*ACA.*ACB.*ACC.*ACD.*ACE.*ACF.*ACG.*ACH.
+....................................................................................................
+*ACI.*ACJ.*ACK.*ACL.*ACM.*ACN.*ACO.*ACP.*ACQ.*ACR.*ACS.*ACT.*ACU.*ACV.*ACW.*ACX.*ACY.*ACZ.*AC0.*AC1.
+....................................................................................................
+99
+AAA AAB 1
+AAB AAC 1
+AAC AAD 1
+AAD AAE 1
+AAE AAF 1
+AAF AAG 1
+AAG AAH 1
+AAH AAI 1
+AAI AAJ 1
+AAJ AAK 1
+AAK AAL 1
+AAL AAM 1
+AAM AAN 1
+AAN AAO 1
+AAO AAP 1
+AAP AAQ 1
+AAQ AAR 1
+AAR AAS 1
+AAS AAT 1
+AAT AAU 1
+AAU AAV 1
+AAV AAW 1
+AAW AAX 1
+AAX AAY 1
+AAY AAZ 1
+AAZ AA0 1
+AA0 AA1 1
+AA1 AA2 1
+AA2 AA3 1
+AA3 AA4 1
+AA4 AA5 1
+AA5 AA6 1
+AA6 AA7 1
+AA7 AA8 1
+AA8 AA9 1
+AA9 ABA 1
+ABA ABB 1
+ABB ABC 1
+ABC ABD 1
+ABD ABE 1
+ABE ABF 1
+ABF ABG 1
+ABG ABH 1
+ABH ABI 1
+ABI ABJ 1
+ABJ ABK 1
+ABK ABL 1
+ABL ABM 1
+ABM ABN 1
+ABN ABO 1
+ABO ABP 1
+ABP ABQ 1
+ABQ ABR 1
+ABR ABS 1
+ABS ABT 1
+ABT ABU 1
+ABU ABV 1
+ABV ABW 1
+ABW ABX 1
+ABX ABY 1
+ABY ABZ 1
+ABZ AB0 1
+AB0 AB1 1
+AB1 AB2 1
+AB2 AB3 1
+AB3 AB4 1
+AB4 AB5 1
+AB5 AB6 1
+AB6 AB7 1
+AB7 AB8 1
+AB8 AB9 1
+AB9 ACA 1
+ACA ACB 1
+ACB ACC 1
+ACC ACD 1
+ACD ACE 1
+ACE ACF 1
+ACF ACG 1
+ACG ACH 1
+ACH ACI 1
+ACI ACJ 1
+ACJ ACK 1
+ACK ACL 1
+ACL ACM 1
+ACM ACN 1
+ACN ACO 1
+ACO ACP 1
+ACP ACQ 1
+ACQ ACR 1
+ACR ACS 1
+ACS ACT 1
+ACT ACU 1
+ACU ACV 1
+ACV ACW 1
+ACW ACX 1
+ACX ACY 1
+ACY ACZ 1
+ACZ AC0 1
+AC0 AC1 1
+1
+AAA AC1 1

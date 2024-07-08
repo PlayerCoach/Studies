@@ -1,0 +1,60 @@
+Microsoft (R) Macro Assembler Version 5.00                  1/9/24 15:09:53
+                                                             Page     1-1
+
+
+       1				.386 
+       2 0000				rozkazy SEGMENT use16 
+       3				ASSUME CS:rozkazy 
+       4 0000				zacznij: 
+       5 0000  B4 00			mov ah, 0 ; funkcja nr 0 ustawia tryb 
+       6				; sterownika 
+       7 0002  B0 13			mov al, 13H ; nr trybu 
+       8 0004  CD 10			int 10H ; wywołanie funkcji systemu BI
+					OS 
+       9 0006  B8 A000			mov ax, 0A000H ; adres pamięci ekranu 
+      10 0009  8E C0			mov es, ax 
+      11 000B  B9 00C8			mov cx, 200 ; liczba linii na ekranie 
+      12 000E  BB 00A0			mov bx, 160 ; adres początkowy 
+      13 0011				ptl_lin: 
+      14 0011  26: C6 07 0A		mov byte PTR es:[bx], 10 ; kolor 
+      15				; jasnozielony 
+      16 0015  81 C3 0140		add bx, 320 
+      17 0019  E2 F6			loop ptl_lin 
+      18 001B				rozkazy ENDS 
+      19 0000				nasz_stos SEGMENT stack 
+      20 0000  0080[			db 128 dup (?) 
+      21	    ??			
+      22			 ]	
+      23				
+      24 0080				nasz_stos ENDS 
+      25				END zacznij 
+Microsoft (R) Macro Assembler Version 5.00                  1/9/24 15:09:53
+                                                             Symbols-1
+
+
+
+
+                N a m e         	Size	Length	 Align	Combine Class
+
+NASZ_STOS  . . . . . . . . . . .  	32 Bit	0080	PARA	STACK	
+ROZKAZY  . . . . . . . . . . . .  	16 Bit	001B	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+PTL_LIN  . . . . . . . . . . . .  	L NEAR	0011	ROZKAZY
+
+ZACZNIJ  . . . . . . . . . . . .  	L NEAR	0000	ROZKAZY
+
+@FILENAME  . . . . . . . . . . .  	TEXT  test		
+
+
+     22 Source  Lines
+     22 Total   Lines
+      6 Symbols
+
+  50486 + 466058 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E24A7B-6C00-46B1-B568-DDD1E06C727F}|laboratoryjne\\laboratoryjne.vcxproj|C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\laboratoryjne\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9E24A7B-6C00-46B1-B568-DDD1E06C727F}|laboratoryjne\\laboratoryjne.vcxproj|solutionrelative:laboratoryjne\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E24A7B-6C00-46B1-B568-DDD1E06C727F}|laboratoryjne\\laboratoryjne.vcxproj|C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\laboratoryjne\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B9E24A7B-6C00-46B1-B568-DDD1E06C727F}|laboratoryjne\\laboratoryjne.vcxproj|solutionrelative:laboratoryjne\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.asm",
+              "DocumentMoniker": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\laboratoryjne\\main.asm",
+              "RelativeDocumentMoniker": "laboratoryjne\\main.asm",
+              "ToolTip": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\laboratoryjne\\main.asm",
+              "RelativeToolTip": "laboratoryjne\\main.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-08T20:20:32.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.c",
+              "DocumentMoniker": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\laboratoryjne\\Source.c",
+              "RelativeDocumentMoniker": "laboratoryjne\\Source.c",
+              "ToolTip": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\laboratoryjne\\laboratoryjne\\Source.c",
+              "RelativeToolTip": "laboratoryjne\\Source.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-07-08T20:20:33.103Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

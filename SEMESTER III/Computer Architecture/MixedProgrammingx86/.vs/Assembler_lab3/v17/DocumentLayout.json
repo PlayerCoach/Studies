@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E9112EE5-90A5-4428-A7BF-532BE530F92F}|Assembler_lab3\\Assembler_lab3.vcxproj|C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\Assembler_lab3\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E9112EE5-90A5-4428-A7BF-532BE530F92F}|Assembler_lab3\\Assembler_lab3.vcxproj|solutionrelative:Assembler_lab3\\Source.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9112EE5-90A5-4428-A7BF-532BE530F92F}|Assembler_lab3\\Assembler_lab3.vcxproj|C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\Assembler_lab3\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E9112EE5-90A5-4428-A7BF-532BE530F92F}|Assembler_lab3\\Assembler_lab3.vcxproj|solutionrelative:Assembler_lab3\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.c",
+              "DocumentMoniker": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\Assembler_lab3\\Source.c",
+              "RelativeDocumentMoniker": "Assembler_lab3\\Source.c",
+              "ToolTip": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\Assembler_lab3\\Source.c",
+              "RelativeToolTip": "Assembler_lab3\\Source.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-07-08T19:35:36.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.asm",
+              "DocumentMoniker": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\Assembler_lab3\\main.asm",
+              "RelativeDocumentMoniker": "Assembler_lab3\\main.asm",
+              "ToolTip": "C:\\Users\\olafj\\Desktop\\Studies\\SEMESTER III\\Computer Architecture\\Assembler_lab3\\Assembler_lab3\\main.asm",
+              "RelativeToolTip": "Assembler_lab3\\main.asm",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAADQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-08T19:35:36.756Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

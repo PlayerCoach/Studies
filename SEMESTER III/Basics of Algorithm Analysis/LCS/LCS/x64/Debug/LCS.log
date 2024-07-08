@@ -1,0 +1,6 @@
+﻿  Source1.cpp
+C:\Users\olafj\source\repos\LCS\LCS\Source1.cpp(36,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\olafj\source\repos\LCS\LCS\Source1.cpp(36,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\olafj\source\repos\LCS\LCS\Source1.cpp(83,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\olafj\source\repos\LCS\LCS\Source1.cpp(79,6): warning C4101: 'places': unreferenced local variable
+  LCS.vcxproj -> C:\Users\olafj\source\repos\LCS\x64\Debug\LCS.exe

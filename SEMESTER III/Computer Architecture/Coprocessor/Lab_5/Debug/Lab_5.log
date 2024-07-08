@@ -1,0 +1,4 @@
+﻿  Assembling main.asm...
+  Source.c
+C:\Users\olafj\Desktop\Studies\SEMESTER III\Computer Architecture\Lab_5\Lab_5\Source.c(13,31): warning C4133: 'function': incompatible types - from 'double [2]' to 'float *'
+  Lab_5.vcxproj -> C:\Users\olafj\Desktop\Studies\SEMESTER III\Computer Architecture\Lab_5\Debug\Lab_5.exe

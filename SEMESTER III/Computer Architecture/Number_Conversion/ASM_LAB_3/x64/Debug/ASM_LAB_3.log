@@ -1,0 +1,7 @@
+﻿  Assembling main.asm...
+main.asm(1): error A2008: syntax error : .
+main.asm(2): error A2008: syntax error : .
+main.asm(44): error A2070: invalid instruction operands
+main.asm(26): error A2229: cannot use labels and 32-bit addressing in the same expression
+main.asm(36): error A2229: cannot use labels and 32-bit addressing in the same expression
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\main.obj" /W3 /errorReport:prompt  /Tamain.asm" exited with code 1.
