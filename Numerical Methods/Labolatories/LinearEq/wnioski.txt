@@ -1,0 +1,4 @@
+Zarówno przy metodzie gaussa jak i jacobiego error_norm znacząco rośnie i dąży do nieskończoności, przez co rozwiązanie nie jest dokładne.
+W metodzie direct, rozwiązanie nie posiada błędu, jest dokładne.
+Żadna z metod iteratycjnych nie zbiega się, i na dodatek wykonują się dłużej od meotdy direct.
+Najgorszą z podanych metod jest metoda Jacobiego, największy error_norm i najdłuższy czas wykonywania.

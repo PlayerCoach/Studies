@@ -1,0 +1,1 @@
+[integration_error, Nt, ft_5, xr, yr, yrmax] = zadanie4();

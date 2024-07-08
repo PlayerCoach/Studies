@@ -1,0 +1,15 @@
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\bin\Debug\net8.0\LINQ_Ex.exe
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\bin\Debug\net8.0\LINQ_Ex.deps.json
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\bin\Debug\net8.0\LINQ_Ex.runtimeconfig.json
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\bin\Debug\net8.0\LINQ_Ex.dll
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\bin\Debug\net8.0\LINQ_Ex.pdb
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.AssemblyInfoInputs.cache
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.AssemblyInfo.cs
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.csproj.CoreCompileInputs.cache
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.dll
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\refint\LINQ_Ex.dll
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.pdb
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.genruntimeconfig.cache
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\ref\LINQ_Ex.dll
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab9\LINQ_Ex\obj\Debug\net8.0\LINQ_Ex.sourcelink.json

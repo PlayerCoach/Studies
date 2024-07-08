@@ -1,0 +1,20 @@
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.csproj.AssemblyReference.cache
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.Properties.Resources.resources
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.csproj.GenerateResource.cache
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.csproj.CoreCompileInputs.cache
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\bin\Debug\PtLab11.exe.config
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\bin\Debug\PtLab11.exe
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\bin\Debug\PtLab11.pdb
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.exe
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.pdb
+C:\Users\olafj\Desktop\PG_PROJECSTS\PtLab11\obj\Debug\PtLab11.Form1.resources
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\bin\Debug\PtLab11.exe.config
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\bin\Debug\PtLab11.exe
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\bin\Debug\PtLab11.pdb
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.csproj.AssemblyReference.cache
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.Form1.resources
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.Properties.Resources.resources
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.csproj.GenerateResource.cache
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.csproj.CoreCompileInputs.cache
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.exe
+C:\Users\olafj\Desktop\Studies\Technological Platforms\PtLab11_193415\obj\Debug\PtLab11.pdb

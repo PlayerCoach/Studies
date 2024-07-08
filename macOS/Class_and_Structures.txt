@@ -1,0 +1,230 @@
+import Foundation
+
+// Define JSON data as a string
+let jsonDataString = """
+[
+    {
+        "user": {
+            "username": "Apple",
+            "profilePicture": "apple_profile.jpg",
+            "activeStory": true,
+            "isFollowed": true,
+            "isVerified": true
+        },
+        "isSponsored": false,
+        "reactionCount": 413000,
+        "commentCount": 100,
+        "shareCount": 50,
+        "description": "Check out our latest video!",
+        "isSaved": false,
+        "type": "video",
+        "topComment": {
+            "userName": "user123",
+            "comment": "Great post!"
+        },
+        "soundUsed": "AppleMusic"
+    },
+    {
+        "user": {
+            "username": "Google",
+            "profilePicture": "google_profile.jpg",
+            "activeStory": true,
+            "isFollowed": true,
+            "isVerified": true
+        },
+        "isSponsored": true,
+        "reactionCount": 1200000,
+        "commentCount": 300,
+        "shareCount": 150,
+        "description": "New product announcement!",
+        "isSaved": false,
+        "type": "photo",
+        "topComment": {
+            "userName": "user456",
+            "comment": "Awesome content!"
+        },
+        "soundUsed": null
+    }
+]
+"""
+
+guard let jsonData = jsonDataString.data(using: .utf8) else {
+    fatalError("Failed to convert JSON string to Data.")
+}
+
+enum InstagramMediaType: String, Codable {
+    case photo
+    case photoCollection
+    case video
+    case videoCollection
+    case instagramReel
+}
+
+struct Comment: Codable {
+    let userName: String
+    let comment: String
+}
+
+class CreatorOfPost: Codable {
+    let username: String
+    let profilePicture: String
+    let activeStory: Bool
+    let isFollowed: Bool
+    let isVerified: Bool
+    
+    init(username: String, profilePicture: String, activeStory: Bool, isFollowed: Bool, isVerified: Bool) {
+        self.username = username
+        self.profilePicture = profilePicture
+        self.activeStory = activeStory
+        self.isFollowed = isFollowed
+        self.isVerified = isVerified
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.username = try container.decode(String.self, forKey: .username)
+        self.profilePicture = try container.decode(String.self, forKey: .profilePicture)
+        self.activeStory = try container.decode(Bool.self, forKey: .activeStory)
+        self.isFollowed = try container.decode(Bool.self, forKey: .isFollowed)
+        self.isVerified = try container.decode(Bool.self, forKey: .isVerified)
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case username
+        case profilePicture
+        case activeStory
+        case isFollowed
+        case isVerified
+    }
+}
+
+func formattedReactionCount(reactionCount: Int) -> String {
+    if reactionCount >= 1_000_000 {
+        let millionLikes = Double(reactionCount) / 1_000_000
+        return String(format: "%.1fM likes", millionLikes)
+    } else if reactionCount >= 1_000 {
+        let thousandLikes = Double(reactionCount) / 1_000
+        return String(format: "%.1fK likes", thousandLikes)
+    } else {
+        return "\(reactionCount) likes"
+    }
+}
+
+func formattedShareCount(shareCount: Int) -> String {
+    if shareCount >= 1_000_000 {
+        let millionShares = Double(shareCount) / 1_000_000
+        return String(format: "%.1fM shares", millionShares)
+    } else if shareCount >= 1_000 {
+        let thousandShares = Double(shareCount) / 1_000
+        return String(format: "%.1fK shares", thousandShares)
+    } else {
+        return "\(shareCount) shares"
+    }
+}
+
+class Post: CreatorOfPost {
+    let isSponsored: Bool
+    let reactionCount: Int
+    let commentCount: Int
+    let shareCount: Int
+    let description: String
+    let isSaved: Bool
+    let type: InstagramMediaType
+    let topComment: Comment?
+    let soundUsed: String?
+
+    init(user: CreatorOfPost, isSponsored: Bool, reactionCount: Int, commentCount: Int, shareCount: Int, description: String, isSaved: Bool, type: InstagramMediaType, topComment: Comment? = nil, soundUsed: String? = nil) {
+        self.isSponsored = isSponsored
+        self.reactionCount = reactionCount
+        self.commentCount = commentCount
+        self.shareCount = shareCount
+        self.description = description
+        self.isSaved = isSaved
+        self.type = type
+        self.topComment = topComment
+        self.soundUsed = soundUsed
+        super.init(username: user.username, profilePicture: user.profilePicture, activeStory: user.activeStory, isFollowed: user.isFollowed, isVerified: user.isVerified)
+    }
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let user = try container.decode(CreatorOfPost.self, forKey: .user)
+        self.isSponsored = try container.decode(Bool.self, forKey: .isSponsored)
+        self.reactionCount = try container.decode(Int.self, forKey: .reactionCount)
+        self.commentCount = try container.decode(Int.self, forKey: .commentCount)
+        self.shareCount = try container.decode(Int.self, forKey: .shareCount)
+        self.description = try container.decode(String.self, forKey: .description)
+        self.isSaved = try container.decode(Bool.self, forKey: .isSaved)
+        self.type = try container.decode(InstagramMediaType.self, forKey: .type)
+        self.topComment = try container.decodeIfPresent(Comment.self, forKey: .topComment)
+        self.soundUsed = try container.decodeIfPresent(String.self, forKey: .soundUsed)
+        
+        super.init(username: user.username, profilePicture: user.profilePicture, activeStory: user.activeStory, isFollowed: user.isFollowed, isVerified: user.isVerified)
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case user
+        case isSponsored
+        case reactionCount
+        case commentCount
+        case shareCount
+        case description
+        case isSaved
+        case type
+        case topComment
+        case soundUsed
+    }
+    
+    func printPostDetails() {
+        printUserInfo()
+        print("---")
+        printPostInfo()
+        print("---")
+        printTopComment()
+    }
+
+    private func printUserInfo() {
+        print("User Info:")
+        print("Username: \(username)")
+        print("Profile Picture: \(profilePicture)")
+        print("Active Story: \(activeStory ? "Yes" : "No")")
+        print("Followed: \(isFollowed ? "Yes" : "No")")
+        print("Verified: \(isVerified ? "Yes" : "No")")
+    }
+
+    private func printPostInfo() {
+        print("Post Info:")
+        print("Description: \(description)")
+        print("Type: \(type.rawValue)")
+        print("Reaction Count: \(formattedReactionCount(reactionCount: reactionCount))")
+        print("Comment Count: \(commentCount)")
+        print("Share Count: \(formattedShareCount(shareCount: shareCount))")
+        print("Sponsored: \(isSponsored ? "Yes" : "No")")
+        print("Saved: \(isSaved ? "Yes" : "No")")
+        print("Sound Used: \(soundUsed ?? "None")")
+    }
+
+    private func printTopComment() {
+        if let topComment = topComment {
+            print("Top Comment:")
+            print("Username: \(topComment.userName)")
+            print("Comment: \(topComment.comment)")
+        } else {
+            print("No top comment available.")
+        }
+    }
+}
+
+var posts = [Post]()
+
+print("INSTAGRAM \n \n")
+do {
+    // Parse JSON data
+    posts = try JSONDecoder().decode([Post].self, from: jsonData)
+    for post in posts {
+        post.printPostDetails()
+        print("------------------------------")
+    }
+} catch {
+    print("Error reading or parsing JSON: \(error)")
+}

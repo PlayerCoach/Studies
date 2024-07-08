@@ -1,0 +1,24 @@
+﻿<Window x:Class="FileExplorer.MVVM.View.CreateFileForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileExplorer.MVVM.View"
+        mc:Ignorable="d"
+        Title="CreateFileForm" Height="350" Width="250" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock Text="File Name" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="FileNameTextBox" Text="{Binding FileName}" HorizontalAlignment="Left" Height="23" Margin="104,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <RadioButton Content="File" IsChecked="{Binding IsFile}" HorizontalAlignment="Left" Margin="26,81,0,0" VerticalAlignment="Top" GroupName="FileType"/>
+        <RadioButton Content="Directory" IsChecked="{Binding IsDirectory}" HorizontalAlignment="Left" Margin="157,81,0,0" VerticalAlignment="Top" GroupName="FileType"/>
+
+        <CheckBox Content="ReadOnly" IsChecked="{Binding IsReadOnly}" HorizontalAlignment="Center" Margin="14,160,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Archive" IsChecked="{Binding IsArchive}" HorizontalAlignment="Center" Margin="2,175,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Hidden" IsChecked="{Binding IsHidden}" HorizontalAlignment="Center" Margin="2,190,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="System" IsChecked="{Binding IsSystem}" HorizontalAlignment="Center" Margin="1,205,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Create" Command="{Binding CreateCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" HorizontalAlignment="Left" Margin="26,280,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Command="{Binding CancelCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" HorizontalAlignment="Left" Margin="148,280,0,0" VerticalAlignment="Top" Width="76"/>
+    </Grid>
+</Window>

@@ -1,0 +1,260 @@
+import Foundation
+
+class Game 
+{
+    var stringToGuess: String
+    var maxNumberOfTries: Int
+    var guessedLetters: Set<Character>
+    var numberOfTries: Int
+
+    init(maxTries: Int, word: String) 
+    {
+        self.stringToGuess = word
+        self.maxNumberOfTries = maxTries
+        self.guessedLetters = Set<Character>()
+        self.numberOfTries = 0
+    }
+
+    func printCurrentState() 
+    {
+        for character in stringToGuess 
+        {
+            if guessedLetters.contains(character) 
+            {
+                print(character, terminator: " ")
+            } 
+            else 
+            {
+                print("_", terminator: " ")
+            }
+        }
+        print()
+    }
+    
+    func checkGuess(_ character: Character) -> Bool 
+    {
+        guessedLetters.insert(character)
+        return stringToGuess.contains(character)
+    }
+    
+    func checkWinningCondition() -> Bool 
+    {
+        return !stringToGuess.contains { !guessedLetters.contains($0) }
+    }
+    
+    func readCharFromConsole() -> Character? 
+    {
+        guard let input = readLine(), let firstChar = input.first else 
+        {
+            return nil
+        }
+        return firstChar
+    }
+    
+    func handleInput() -> Character? 
+    {
+        guard let input = readCharFromConsole() else 
+        {
+            return nil
+        }
+        
+        let character = input.lowercased().first
+        
+        if let char = character, char.isLetter || char == " " 
+        {
+            return char
+        } 
+        else 
+        {
+            return nil
+        }
+    }
+    
+    func start() 
+    {
+        print("Guess a word, number of tries: \(maxNumberOfTries), number of characters: \(stringToGuess.count)")
+        printCurrentState()
+        print()
+        var roundCounter = 0
+        
+        while numberOfTries < maxNumberOfTries 
+        {
+            if roundCounter > 0 
+            {
+                print("Round number \(roundCounter), number of guesses left: \(maxNumberOfTries - numberOfTries)")
+                print("Characters guessed: \(guessedLetters)")
+                printCurrentState()
+            }
+            
+            if let character = handleInput() 
+            {
+                if guessedLetters.contains(character) 
+                {
+                    print("You already guessed that character")
+                    continue
+                }
+                
+                if checkGuess(character) 
+                {
+                    if checkWinningCondition() 
+                    {
+                        print("Congratulations you have guessed correctly and lost \(numberOfTries) tries")
+                        print("The word was:")
+                        printCurrentState()
+                        return
+                    }
+                    roundCounter += 1
+                } 
+                else 
+                {
+                    numberOfTries += 1
+                    roundCounter += 1
+                }
+            } 
+            else 
+            {
+                print("Wrong input")
+            }
+        }
+        
+        print("You didn't make it this time, try again")
+        print("The word was: \(stringToGuess)")
+    }
+}
+
+class GameHandler 
+{
+    var game: Game
+    var category: String
+    let categories = ["movie", "book", "animal", "famous person"]
+    
+    let movieWords = ["avatar", "inception", "titanic", "jurassic park", "star wars", "the godfather", "forrest gump", "the matrix", "the lion king", "inception"]
+    let bookWords = ["harry potter", "the lord of the rings", "to kill a mockingbird", "1984", "the great gatsby", "the hobbit", "the catcher in the rye", "the da vinci code", "the hunger games", "gone with the wind"]
+    let animalWords = ["lion", "elephant", "tiger", "zebra", "giraffe", "monkey", "panda", "koala", "kangaroo", "cheetah"]
+    let famousPersonWords = ["albert einstein", "william shakespeare", "leonardo da vinci", "nelson mandela", "marie curie", "winston churchill", "abraham lincoln", "mother teresa", "nelson mandela", "michael jordan"]
+    var difficulty: String
+    let difficulties = ["easy", "medium", "hard"]
+    
+    init() 
+    {
+        self.category = ""
+        self.difficulty = ""
+        self.game = Game(maxTries: 0, word: "")
+        setupGame()
+    }
+    
+    func setupGame() 
+    {
+        self.category = pickCategory()
+        self.difficulty = pickDifficulty()
+        let wordToGuess = getRandomWord(category: category)
+        var maxNumberOfTries = 0
+        
+        if difficulty == "easy" 
+        {
+            maxNumberOfTries = 10
+        } 
+        else if difficulty == "medium" 
+        {
+            maxNumberOfTries = 7
+        } 
+        else if difficulty == "hard" 
+        {
+            maxNumberOfTries = 5
+        }
+        
+        self.game = Game(maxTries: maxNumberOfTries, word: wordToGuess!)
+    }
+    
+    func start() 
+    {
+        print("Category = \(category), difficulty = \(difficulty)")
+        game.start()
+    }
+    
+    func pickCategory() -> String 
+    {
+        var input: String? = nil
+        
+        while input == nil 
+        {
+            print("Categories to pick from: \(categories)")
+            
+            guard let userInput = readLine()?.lowercased() else 
+            {
+                print("Error while reading input, try again")
+                continue
+            }
+            
+            if categories.contains(userInput) 
+            {
+                input = userInput
+            } 
+            else 
+            {
+                print("Invalid category, try again")
+            }
+        }
+        
+        return input!
+    }
+    
+    func getRandomWord(category: String) -> String? 
+    {
+        var words: [String]?
+        
+        switch category.lowercased() 
+        {
+            case "movie":
+                words = movieWords
+            case "book":
+                words = bookWords
+            case "animal":
+                words = animalWords
+            case "famous person":
+                words = famousPersonWords
+            default:
+                print("Invalid category")
+                return nil
+        }
+        
+        guard let wordList = words, !wordList.isEmpty else 
+        {
+            print("No words found for category: \(category)")
+            return nil
+        }
+        
+        let randomIndex = Int.random(in: 0..<wordList.count)
+        return wordList[randomIndex]
+    }
+    
+    func pickDifficulty() -> String 
+    {
+        var input: String? = nil
+        
+        while input == nil 
+        {
+            print("Difficulties to pick from: \(difficulties)")
+            
+            guard let userInput = readLine()?.lowercased() else 
+            {
+                print("Error while reading input, try again")
+                continue
+            }
+            
+            if difficulties.contains(userInput) 
+            {
+                input = userInput
+            } 
+            else 
+            {
+                print("Invalid difficulty, try again")
+            }
+        }
+        
+        return input!
+    }
+}
+
+let gameHandler = GameHandler()
+gameHandler.start()

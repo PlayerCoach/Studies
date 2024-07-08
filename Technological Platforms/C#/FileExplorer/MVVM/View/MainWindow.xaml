@@ -1,0 +1,69 @@
+﻿<Window x:Class="FileExplorer.MVVM.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileExplorer.MVVM.View"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        Title="File Explorer"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Themes/ModernToolbar.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" Style="{StaticResource ModernToolbar}">
+            <Menu ToolBar.OverflowMode="Never" Background="Transparent">
+                <MenuItem Header="File" Width="33" TextBlock.TextAlignment="Center">
+                    <MenuItem Header="Open" Command="{Binding OpenFileCommand}" />
+                    <Separator />
+                    <MenuItem Header="Exit" Command="{Binding CloseAppCommand }" />
+                </MenuItem>
+            </Menu>
+        </ToolBar>
+
+        <StatusBar DockPanel.Dock="Bottom" Height="20" Background="AliceBlue" Visibility="{Binding StatusBarText, Converter={StaticResource StringToVisibilityConverter}}">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusBarText}" />
+            </StatusBarItem>
+        </StatusBar>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TreeView Name="FileTree" BorderBrush="Transparent">
+                <TreeView.Resources>
+                    <Style TargetType="TreeViewItem">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TreeView.Resources>
+            </TreeView>
+
+            <Border Grid.Column="1" Background="Black"/>
+            <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+                <TextBlock Name="FilePreviewTextBlock"/>
+            </ScrollViewer>
+        </Grid>
+        
+
+    </DockPanel>
+    
+
+
+</Window>

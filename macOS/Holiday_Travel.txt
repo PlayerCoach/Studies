@@ -1,0 +1,258 @@
+import Foundation
+struct Location {
+    let id: Int
+    let type: String
+    let name: String
+    let rating: Int
+}
+
+struct City {
+    let id: Int
+    let name: String
+    let description: String
+    let latitude: Double
+    let longitude: Double
+    let keywords: [String]
+    var locations: [Location]
+}
+//ex 1 and 4
+
+let cities: [City] = [
+    City(id: 1, name: "New York City", description: "The city that never sleeps.", latitude: 40.7128, longitude: -74.0060, keywords: ["urban", "culture", "nightlife"], locations: [
+        Location(id: 1, type: "Restaurant", name: "Le Bernardin", rating: 5),
+        Location(id: 2, type: "Museum", name: "The Metropolitan Museum of Art", rating: 4),
+        Location(id: 3, type: "Park", name: "Central Park", rating: 5)
+    ]),
+    City(id: 2, name: "Los Angeles", description: "The entertainment capital of the world.", latitude: 34.0522, longitude: -118.2437, keywords: ["film", "beaches", "celebrities"], locations: [
+        Location(id: 4, type: "Restaurant", name: "The Bazaar by José Andrés", rating: 4),
+        Location(id: 5, type: "Beach", name: "Venice Beach", rating: 4),
+        Location(id: 6, type: "Museum", name: "The Getty Center", rating: 5)
+    ]),
+    City(id: 3, name: "Chicago", description: "The windy city.", latitude: 41.8781, longitude: -87.6298, keywords: ["architecture", "culture", "music"], locations: [
+        Location(id: 7, type: "Restaurant", name: "Alinea", rating: 5),
+        Location(id: 8, type: "Museum", name: "Art Institute of Chicago", rating: 5),
+        Location(id: 9, type: "Park", name: "Millennium Park", rating: 4)
+    ]),
+    City(id: 4, name: "Houston", description: "Space City.", latitude: 29.7604, longitude: -95.3698, keywords: ["space", "diversity", "culture"], locations: [
+        Location(id: 10, type: "Restaurant", name: "Uchi Houston", rating: 4),
+        Location(id: 11, type: "Museum", name: "Museum of Fine Arts, Houston", rating: 4),
+        Location(id: 12, type: "Park", name: "Hermann Park", rating: 5)
+    ]),
+    City(id: 5, name: "Phoenix", description: "Valley of the Sun.", latitude: 33.4484, longitude: -112.0740, keywords: ["desert", "sunshine", "outdoor"], locations: [
+        Location(id: 13, type: "Restaurant", name: "Pizzeria Bianco", rating: 4),
+        Location(id: 14, type: "Museum", name: "Heard Museum", rating: 4),
+        Location(id: 15, type: "Park", name: "Desert Botanical Garden", rating: 5)
+    ]),
+    City(id: 6, name: "Philadelphia", description: "City of brotherly love.", latitude: 39.9526, longitude: -75.1652, keywords: ["history", "culture", "food"], locations: [
+        Location(id: 16, type: "Restaurant", name: "Zahav", rating: 5),
+        Location(id: 17, type: "Museum", name: "Philadelphia Museum of Art", rating: 4),
+        Location(id: 18, type: "Park", name: "Fairmount Park", rating: 4)
+    ]),
+    City(id: 7, name: "San Antonio", description: "Remember the Alamo.", latitude: 29.4241, longitude: -98.4936, keywords: ["history", "culture", "food"], locations: [
+        Location(id: 19, type: "Restaurant", name: "The Esquire Tavern", rating: 4),
+        Location(id: 20, type: "Museum", name: "The Alamo", rating: 4),
+        Location(id: 21, type: "Park", name: "San Antonio River Walk", rating: 5)
+    ]),
+    City(id: 8, name: "San Diego", description: "America's finest city.", latitude: 32.7157, longitude: -117.1611, keywords: ["beaches", "surfing", "marine life"], locations: [
+        Location(id: 22, type: "Restaurant", name: "George's at the Cove", rating: 4),
+        Location(id: 23, type: "Beach", name: "La Jolla Cove", rating: 5),
+        Location(id: 24, type: "Museum", name: "USS Midway Museum", rating: 4)
+    ]),
+    City(id: 9, name: "Dallas", description: "Big D.", latitude: 32.7767, longitude: -96.7970, keywords: ["business", "sports", "culture"], locations: [
+        Location(id: 25, type: "Restaurant", name: "Knife Dallas", rating: 4),
+        Location(id: 26, type: "Museum", name: "The Sixth Floor Museum at Dealey Plaza", rating: 4),
+        Location(id: 27, type: "Park", name: "Klyde Warren Park", rating: 5)
+    ]),
+    City(id: 10, name: "San Francisco", description: "The Golden City.", latitude: 37.7749, longitude: -122.4194, keywords: ["tech", "culture", "nature"], locations: [
+        Location(id: 28, type: "Restaurant", name: "Gary Danko", rating: 5),
+        Location(id: 29, type: "Museum", name: "San Francisco Museum of Modern Art", rating: 4),
+        Location(id: 30, type: "Park", name: "Golden Gate Park", rating: 5)
+    ]),
+    City(id: 11, name: "Austin", description: "Live Music Capital of the World.", latitude: 30.2672, longitude: -97.7431, keywords: ["music", "food", "outdoor"], locations: [
+        Location(id: 31, type: "Restaurant", name: "Franklin Barbecue", rating: 4),
+        Location(id: 32, type: "Music Venue", name: "Austin City Limits Live at The Moody Theater", rating: 5),
+        Location(id: 33, type: "Park", name: "Zilker Park", rating: 5)
+    ]),
+    City(id: 12, name: "Seattle", description: "The Emerald City.", latitude: 47.6062, longitude: -122.3321, keywords: ["tech", "nature", "culture"], locations: [
+        Location(id: 34, type: "Restaurant", name: "Canlis", rating: 5),
+        Location(id: 35, type: "Museum", name: "Chihuly Garden and Glass", rating: 4),
+        Location(id: 36, type: "Park", name: "Discovery Park", rating: 5)
+    ]),
+    City(id: 13, name: "Denver", description: "Mile High City.", latitude: 39.7392, longitude: -104.9903, keywords: ["outdoor", "sports", "culture"], locations: [
+        Location(id: 37, type: "Restaurant", name: "Frasca Food and Wine", rating: 5),
+        Location(id: 38, type: "Museum", name: "Denver Art Museum", rating: 4),
+        Location(id: 39, type: "Park", name: "City Park", rating: 4)
+    ]),
+    City(id: 14, name: "Las Vegas", description: "Sin City.", latitude: 36.1699, longitude: -115.1398, keywords: ["entertainment", "nightlife", "gambling"], locations: [
+        Location(id: 40, type: "Restaurant", name: "Joël Robuchon", rating: 5),
+        Location(id: 41, type: "Nightclub", name: "XS Nightclub", rating: 4),
+        Location(id: 42, type: "Casino", name: "Bellagio Hotel and Casino", rating: 4)
+    ]),
+    City(id: 15, name: "Miami", description: "Magic City.", latitude: 25.7617, longitude: -80.1918, keywords: ["beaches", "nightlife", "culture"], locations: [
+        Location(id: 43, type: "Restaurant", name: "Joe's Stone Crab", rating: 5),
+        Location(id: 44, type: "Nightclub", name: "LIV", rating: 4),
+        Location(id: 45, type: "Beach", name: "South Beach", rating: 5)
+    ]),
+    City(id: 16, name: "Atlanta", description: "The ATL.", latitude: 33.7490, longitude: -84.3880, keywords: ["business", "culture", "sports"], locations: [
+        Location(id: 46, type: "Restaurant", name: "Bacchanalia", rating: 5),
+        Location(id: 47, type: "Museum", name: "Atlanta History Center", rating: 4),
+        Location(id: 48, type: "Park", name: "Piedmont Park", rating: 5)
+    ]),
+    City(id: 17, name: "Boston", description: "Beantown.", latitude: 42.3601, longitude: -71.0589, keywords: ["history", "culture", "sports"], locations: [
+        Location(id: 49, type: "Restaurant", name: "Oleana", rating: 4),
+        Location(id: 50, type: "Museum", name: "Museum of Fine Arts, Boston", rating: 4),
+        Location(id: 51, type: "Park", name: "Boston Common", rating: 5)
+    ]),
+    City(id: 18, name: "Orlando", description: "The City Beautiful.", latitude: 28.5383, longitude: -81.3792, keywords: ["theme parks", "family", "nature"], locations: [
+        Location(id: 52, type: "Restaurant", name: "Victoria & Albert's", rating: 5),
+        Location(id: 53, type: "Theme Park", name: "Walt Disney World Resort", rating: 5),
+        Location(id: 54, type: "Park", name: "Lake Eola Park", rating: 4)
+    ]),
+    City(id: 19, name: "Washington, D.C.", description: "The nation's capital.", latitude: 38.9072, longitude: -77.0369, keywords: ["history", "politics", "culture"], locations: [
+        Location(id: 55, type: "Restaurant", name: "The Inn at Little Washington", rating: 5),
+        Location(id: 56, type: "Museum", name: "Smithsonian National Museum of Natural History", rating: 4),
+        Location(id: 57, type: "Park", name: "National Mall", rating: 5)
+    ]),
+    City(id: 20, name: "Nashville", description: "Music City.", latitude: 36.1627, longitude: -86.7816, keywords: ["music", "food", "culture"], locations: [
+        Location(id: 58, type: "Restaurant", name: "Husk", rating: 4),
+        Location(id: 59, type: "Music Venue", name: "Ryman Auditorium", rating: 5),
+        Location(id: 60, type: "Park", name: "Centennial Park", rating: 4)
+    ])
+]
+
+// Functions for Ex2
+
+
+func citiesWithName(_ cityName: String, in cities: [City]) -> [City] {
+    let filteredCities = cities.filter { $0.name.lowercased() == cityName.lowercased() }
+    return filteredCities
+}
+
+func citiesWithKeyword(_ keyword: String, in cities: [City]) -> [City] {
+    let filteredCities = cities.filter { $0.keywords.contains { $0.lowercased() == keyword.lowercased() } }
+    return filteredCities
+}
+
+func printCities(_ cities: [City]){
+    for city in cities{
+    print(city.name)
+    }
+}
+print("ex2")
+print()
+print("Cities with name Chicago:")
+printCities(citiesWithName("Chicago", in: cities))
+print("Cities with keyword beaches: ")
+printCities(citiesWithKeyword("beaches", in: cities))
+
+// Functions for Ex3
+
+func calculateDistance(city1: City, city2: City) -> Double {
+    let x1 = city1.longitude
+    let y1 = city1.latitude
+    
+    let x2 = city2.longitude
+    let y2 = city2.latitude
+    
+    let distance = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2))
+    
+    return distance
+}
+
+
+func findClosestAndFarthestCities(userLatitude: Double, userLongitude: Double, cities: [City]) {
+    var closestCity: City?
+    var farthestCity: City?
+    var maxDistance = -Double.infinity
+    var minDistance = Double.infinity
+    
+    for city in cities {
+        let distance = calculateDistance(city1: city, city2: City(id: 0, name: "", description: "", latitude: userLatitude, longitude: userLongitude, keywords: [], locations: []))
+        if distance < minDistance {
+            minDistance = distance
+            closestCity = city
+        }
+        if distance > maxDistance {
+            maxDistance = distance
+            farthestCity = city
+        }
+    }
+    
+    print("Closest city: \(closestCity?.name ?? "Unknown")")
+    print("Farthest city: \(farthestCity?.name ?? "Unknown")")
+}
+
+
+
+func findTwoFarthestCities(cities: [City]) {
+    var maxDistance = -Double.infinity
+    var farthestCity1: City?
+    var farthestCity2: City?
+    
+    for i in 0..<cities.count {
+        for j in i+1..<cities.count {
+            let distance = calculateDistance(city1: cities[i], city2: cities[j])
+            if distance > maxDistance {
+                maxDistance = distance
+                farthestCity1 = cities[i]
+                farthestCity2 = cities[j]
+            }
+        }
+    }
+    
+    print("Two farthest cities: \(farthestCity1?.name ?? "Unknown") and \(farthestCity2?.name ?? "Unknown")")
+}
+
+ let userLatitude = 777.0
+ let userLongitude = 15.0
+ print()
+    print("ex 3")
+    print("City closest and furthest to Latitude: 777.0 and Longitude: 15.0 :")
+    findClosestAndFarthestCities(userLatitude: userLatitude, userLongitude: userLongitude, cities: cities)
+    findTwoFarthestCities(cities: cities)
+    
+// function for Ex5
+print()
+print("ex 5")
+print()
+
+func displayCitiesWithFiveStarRestaurants(_ cities: [City]) {
+    let citiesWithFiveStarRestaurants = cities.filter { city in
+        city.locations.contains { $0.type == "Restaurant" && $0.rating == 5 }
+    }
+    print("Cities with 5-star restaurants:")
+    for city in citiesWithFiveStarRestaurants {
+        print(city.name)
+    }
+}
+
+func displayLocationsSortedByRating(for city: City) {
+    let sortedLocations = city.locations.sorted { $0.rating > $1.rating }
+    print("Locations in \(city.name) sorted by rating:")
+    for location in sortedLocations {
+        print("\(location.name) - Rating: \(location.rating)")
+    }
+}
+
+func displayCitiesWithFiveStarLocations(cities: [City]) {
+    for city in cities {
+        let fiveStarLocations = city.locations.filter { $0.rating == 5 }
+        print("\(city.name) - \(fiveStarLocations.count) locations with 5-star rating:")
+        for location in fiveStarLocations {
+            print("- \(location.name)")
+        }
+    }
+}
+
+
+
+
+displayCitiesWithFiveStarRestaurants(cities)
+print()
+let city = cities[0]
+displayLocationsSortedByRating(for: city)
+print()
+print("Cities and locations with 5 star rating assigned to them:")
+print()
+displayCitiesWithFiveStarLocations(cities: cities)
+

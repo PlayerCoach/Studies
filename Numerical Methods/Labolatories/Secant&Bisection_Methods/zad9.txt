@@ -1,0 +1,7 @@
+Funkcja fzero używa różnych metod wyznaczania miejsca zerowego funkcji.
+Z początku zgaduje jakie może być rozwiazanie, po czym zaczyna wykorzystywać najkorzystniejsze w danym momencie
+metody. Dla 6 funckja zastosowała jedynie interpolację, która opiera się na przyblizeniu wartości funkcji 
+w danym punkcie.
+Dla 4,5 funckja zastosowała interpolację na zmianę z metodą bisekcji. Napotkała jednak ona punkt osobliwości,
+w którym wartosci mogą być niezidentyfikowane i przestała szukać. Metoda siecznych nie została wykrozystana.
+MIejsce zerowe nie zostało wyznaczone.
